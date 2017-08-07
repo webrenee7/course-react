@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="users">
+
+</ul>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script>
+    var users=document.getElementById("users");
+    $.ajax({
+        url:'./users.json',
+        type:'get',
+        dataType:'json',
+        success:function (data) {
+            var str='';
+            data.forEach(function (item) {
+                str+=`<li>${item.id}:${item.name}</li>`;
+            });
+            users.innerHTML=str;
+        }
+    });
+
+
+</script>
+</body>
+</html>

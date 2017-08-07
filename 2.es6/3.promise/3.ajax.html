@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<ul id="users"></ul>
+<script>
+
+    /*$.get('users.json').then(function (data) {
+        console.log(data);
+    });*/
+    /*$.ajax({
+        url:'',
+        method:'GET'
+    });*/
+
+//    function ajax(opts) {
+    function ajax({url,method='GET',async=true,dataType='json'}) {
+//        var url=Object.keys(opts)[1];
+        return new Promise(function (resolve,reject) {
+            var xhr=new XMLHttpRequest();
+            xhr.open(method,url,async);
+            xhr.responseType=dataType;
+            xhr.onreadystatechange=function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        resolve(xhr.response);
+                    } else {
+                        reject(xhr.response);
+                    }
+                }
+            };
+            xhr.send();
+        });
+    }
+
+    ajax({url:'users.json'}).then(function (data) {
+        console.log(data);
+    });
+</script>
+</body>
+</html>

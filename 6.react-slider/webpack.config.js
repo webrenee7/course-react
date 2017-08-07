@@ -1,0 +1,39 @@
+var path=require('path');
+var HtmlWebpackPlugin=require('html-webpack-plugin');
+module.exports={
+    entry:'./src/index.js',
+    output:{
+        path:path.resolve('./build'),
+        filename:"build.js"
+    },
+    devServer:{
+        inline:true,
+        port:8080,
+        contentBase:"./build"
+    },
+    module:{
+        loaders:[
+            {
+                test:/\.js$/,
+                loader:"babel-loader",
+                exclude:/node_modules//*,
+                query:{
+                    "presets":["es2015,react"]
+                }*/
+            },
+            {
+                test:/\.css$/,
+                loader:"style-loader!css-loader"
+            },
+            {
+                test:/\.eot|ttf|svg|woff|woff2|png|jpg|ico$/,
+                loader:"url-loader"
+            }
+        ]
+    },
+    plugins:[
+        new HtmlWebpackPlugin({
+            template:"./src/index.html"
+        })
+    ]
+};

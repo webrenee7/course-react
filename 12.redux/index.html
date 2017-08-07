@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="counter"></div>
+<script>
+    //redux实现原理：
+    function createStore(reducer) {
+        var state;//开始状态，状态可以是任何东西，一个数字，json，数组
+        var getState=()=>state;//获取当前状态
+        var listeners=[];//存储所有的监听函数
+        //分发  action是一个普通对象 需要有一个type属性
+        var dispatch=(action)=>{
+            state=reducer(state,action);
+            //状态改变后依次调用监听函数
+            listeners.forEach(listener=>listener())
+        };
+        //订阅状态改变事件
+        var subscribe=(listener)=>{
+            //把监听函数放在数组中保存下来
+            listeners.push(listener);
+        };
+        dispatch();//为了获得初始状态
+        //最后返回一个store对象==》创建的真正的仓库
+        return {
+            dispatch,//分发action
+            subscribe,//订阅状态
+            getState//获取状态
+        }
+    }
+    var reducer=(state=0,action)=>{
+        if(!action) return state;
+        switch (action.type){
+            case "+":
+                return state+1;
+                break;
+            case "-":
+                return state-1;
+            default:
+                return state;
+        }
+    };
+
+
+
+
+
+    //得到仓库
+    var store=createStore(reducer);
+    //分发
+    document.addEventListener('click',function () {
+        store.dispatch({type:"+"});
+    });
+    //订阅
+    store.subscribe(function () {//相当于把监听函数添加到listeners
+        counter.innerHTML=store.getState();//取到新的状态，赋给couter
+    });
+    //状态改变
+
+//    import {createStore} from "redux";
+
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰聊天室</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .user{
+            color:blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="text-center">
+                        <button class="btn btn-danger" onclick="join('red')">红房子</button>
+                        <button class="btn btn-success" onclick="join('green')">绿房子</button>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group" id="messages" onclick="selectUser(event)">
+
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <form class="form-horizontal" onsubmit="send(event)">
+                        <div class="form-group">
+                            <label for="content" class="control-label col-md-1">内容</label>
+                            <div class="col-md-11">
+                                <textarea cols="30" rows="10" name="content" id="content" class="form-control" onkeydown="handleKeydown(event)"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-1 col-md-11">
+                                <button class="btn btn-info">发送</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    //var socket=io.connect('http://localhost:8080');
+    var socket=io('/');//客户端连接到服务器
+    socket.on('connect',function () {//监听服务器连接成功事件
+//        socket.send('客户端成功连接到服务器！！');
+//        socket.send('徐娅！！');
+        //向服务器请求所有的消息
+        socket.emit('getAllMessages');
+    });
+    function parse(msgObj) {
+        return `<span class="user">${msgObj.username}</span>:${msgObj.content}<button class="btn btn-danger" onclick="del(event,'${msgObj._id}')">删除</button><span class="pull-right">${msgObj.createAt&&msgObj.createAt.toLocaleString()}</span>`;
+    }
+    //监听服务器发送过来的每条消息
+    socket.on('message',function (msgObj) {
+        var li=document.createElement("li");
+        li.innerHTML=parse(msgObj);
+        li.className='list-group-item';
+        var messages=document.querySelector("#messages");
+        messages.appendChild(li);
+    });
+    //监听服务器返回的所有消息
+    socket.on('allMessages',function (msgObjs) {
+        document.querySelector('#messages').innerHTML=msgObjs.map(function (msgObj) {
+            return `<li class="list-group-item">${parse(msgObj)}</li>`;
+        }).join('');
+    });
+    function send(event) {
+        event.preventDefault();//阻止默认事件
+        var contentArea=document.querySelector("#content");
+        var content=contentArea.value;//获取文本域的值
+        socket.send(content);//给服务器发送消息
+        contentArea.value='';
+    }
+    function selectUser(event) {
+        if(event.target.className=='user'){
+            var contentArea=document.querySelector("#content");
+            contentArea.value=`@${event.target.innerHTML} `;
+        }
+    }
+    var ctrlDown=false;
+    function handleKeydown(event) {
+        var code=event.keyCode;
+        if(code==17){
+            ctrlDown=true;
+            clearTimeout(timer);
+            var timer=setTimeout(function () {
+                ctrlDown=false;
+            },1000);
+        }
+        if(code==13){
+            if(ctrlDown){
+                var contentArea=document.querySelector("#content");
+                contentArea.value=contentArea.value+'\n';
+            }else{
+                send(event);
+            }
+        }
+    }
+    //加入某个房间
+    function join(roomName) {
+        socket.emit('join',roomName);
+    }
+    //删除聊天记录
+    function del(event,_id) {
+        socket.emit('del',_id);
+        event.target.parentNode.parentNode.removeChild(event.target.parentNode);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+	<title>今日小说排行榜--百度搜索风云榜</title>
+	<base href="http://top.baidu.com/" />
+	<style>
+		.icon-xiang-imp {background:url(http://top.bdimg.com/frontend/static/common/images/xiang.png) center center no-repeat !important;}
+	</style>
+	<script>
+		var href_ps_tn = 'SE_baiduhomet8_jmjb7mjw';
+		var href_ps_prep = 'http://www.baidu.com/baidu?cl=3&tn=SE_baiduhomet8_jmjb7mjw&fr=top1000&wd=';
+		var boardIdsLikeYeYou = ',173,1393,1394,';
+		function checkLikeYeYou(boardId) {
+			if (boardId && boardIdsLikeYeYou.indexOf(',' + boardId + ',') >= 0) {
+				return 1;
+			} else {
+				return 0;
+			}
+		}
+
+
+		var baidu;
+	</script>
+	<script>var BASE_URL = "http://top.baidu.com/", BASEURL = "http://top.bdimg.com/frontend", FLASH_URL= "http://top.baidu.com/frontend";</script>
+	<link rel="stylesheet" href="http://top.bdimg.com/frontend/static/common/common.min.css" />
+	<script type="text/javascript" src="http://top.bdimg.com/frontend/build/common/lib.js?v=150709"></script>
+	<script>var bt = a.template;</script>
+	<link rel="stylesheet" href="http://top.bdimg.com/frontend/static/buzz/buzz.min.css?v=150709" />
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="lg">
+			<a href="./?vit=1"><img src="http://top.bdimg.com/frontend/static/common/logo.png" alt="搜索风云榜" title="搜索风云榜" /></a>
+		</div>
+		<div id="ba_sc">
+			<p id="ba_nv"> <a target="_blank" name="tj_news" href="http://news.baidu.com/a.html">新闻</a>　<a target="_blank" name="tj_ps" href="http://www.baidu.com/a.html">网页</a>　<strong class="bold">风云榜</strong>　<a target="_blank" name="tj_tieba" href="http://tieba.baidu.com/a.html">贴吧</a>　 <a target="_blank" name="tj_zhidao" href="http://zhidao.baidu.com/a.html">知道</a>　 <a target="_blank" name="tj_music" href="http://music.baidu.com/a.html">音乐</a>　 <a target="_blank" name="tj_img" href="http://image.baidu.com/a.html">图片</a>　 <a target="_blank" name="tj_video" href="http://video.baidu.com/a.html">视频</a>　 <a target="_blank" name="tj_map" href="http://map.baidu.com/a.html">地图</a>　 <a target="_blank" name="tj_index" href="http://index.baidu.com/a.html">指数</a> </p>
+			<form id="ba_fm" action="http://www.baidu.com/s" name="f" target="_blank">
+				<input name="tn" value="SE_baiduhomet8_jmjb7mjw" type="hidden" />
+				<span class="s_ipt_wr"> <input value="" data-default="小学性读本引吐槽" maxlength="100" class="s_ipt" name="wd" id="sword" /> </span>
+				<span class="s_btn_wr"> <input type="submit" id="ba_baidu" class="s_btn" onmousedown="this.className='s_btn s_btn_h'" onmouseout="this.className='s_btn'" value="百度一下" /> </span>
+			</form>
+		</div>
+		<p class="ba_hp"> <a href="./help" id="ba_link_help">帮助</a> | <a id="feedback_bd" href="javascript:;">反馈</a> | <a class="fred" target="_blank" href="./add">定制榜单</a> </p>
+	</div>
+	<div id="nav" class="nav has-sub-nav">
+		<ul id="main-nav">
+			<li> <a href="./?vit=1">首页</a> </li>
+			<li> <a href="./news">风云时讯</a> </li>
+			<li><a href="category?c=1">娱乐</a>
+				<ul class="sub-nav">
+					<li><a href="./category?c=1">电影</a></li>
+					<li><a href="./category?c=2">电视剧</a></li>
+					<li><a href="./category?c=3">综艺</a></li>
+					<li><a href="./category?c=33">音乐</a></li>
+					<li><a href="./category?c=5">动漫</a></li>
+				</ul></li>
+			<li><a href="./category?c=9">人物</a>
+				<ul class="sub-nav">
+					<li><a href="./buzz?b=258">热点人物</a></li>
+					<li><a href="./buzz?b=618">娱乐名人</a></li>
+					<li><a href="./buzz?b=18">女演员</a></li>
+					<li><a href="./buzz?b=17">男演员</a></li>
+					<li><a href="./buzz?b=16">女歌手</a></li>
+					<li><a href="./buzz?b=15">男歌手</a></li>
+					<li><a href="./buzz?b=454">主持人</a></li>
+					<li><a href="./buzz?b=255">体坛人物</a></li>
+					<li><a href="./buzz?b=3">美女</a></li>
+					<li><a href="./buzz?b=22">帅哥</a></li>
+				</ul></li>
+			<li class="current"><a href="./category?c=10">小说<span>&nbsp;</span></a></li>
+			<li><a href="./category?c=513">热点</a>
+				<ul class="sub-nav">
+					<li><a href="./buzz?b=1">实时热点</a></li>
+					<li><a href="./buzz?b=341">今日热点</a></li>
+					<li><a href="./buzz?b=42">七日热点</a></li>
+					<li><a href="./buzz?b=342">民生热点</a></li>
+					<li><a href="./buzz?b=344">娱乐热点</a></li>
+					<li><a href="./buzz?b=11">体育热点</a></li>
+				</ul></li>
+			<li><a href="./buzz?b=1564">汽车</a></li>
+			<li><a href="./buzz?b=1566">手机</a></li>
+			<li> <a href="./boards">全部榜单</a> </li>
+			<li> <a href="./region">地域风向标</a> </li>
+			<li class="last"> <a href="./population">人群风向标</a> </li>
+		</ul>
+		<ul id="sub-nav">
+			<li class="active"><a href="./buzz?b=7">全部<span>&nbsp;</span></a></li>
+			<li><a href="./buzz?b=353">玄幻奇幻<span>&nbsp;</span></a></li>
+			<li><a href="./buzz?b=355">都市言情<span>&nbsp;</span></a></li>
+			<li><a href="./buzz?b=354">武侠仙侠<span>&nbsp;</span></a></li>
+			<li><a href="./buzz?b=1508">青春校园<span>&nbsp;</span></a></li>
+			<li><a href="./buzz?b=1509">穿越架空<span>&nbsp;</span></a></li>
+			<li><a href="./buzz?b=356">惊悚悬疑<span>&nbsp;</span></a></li>
+			<li><a href="./buzz?b=459">历史军事<span>&nbsp;</span></a></li>
+			<li><a href="./buzz?b=1512">游戏竞技<span>&nbsp;</span></a></li>
+			<li><a href="./buzz?b=1510">耽美同人<span>&nbsp;</span></a></li>
+			<li><a href="./buzz?b=1513">文学经典<span>&nbsp;</span></a></li>
+		</ul>
+	</div>
+	<div id="main" class="main">
+		<div id="flist" class="w_139">
+			<div class="hblock">
+				<ul>
+					<li><a class="bb" title="小说榜单首页" href="./category?c=10">小说榜单首页</a></li>
+					<li> <a class="odd se" title="全部" href="./buzz?b=7&amp;c=10">全部</a> </li>
+					<li> <a class=" " title="玄幻奇幻" href="./buzz?b=353&amp;c=10">玄幻奇幻</a> </li>
+					<li> <a class="odd " title="都市言情" href="./buzz?b=355&amp;c=10">都市言情</a> </li>
+					<li> <a class=" " title="武侠仙侠" href="./buzz?b=354&amp;c=10">武侠仙侠</a> </li>
+					<li> <a class="odd " title="青春校园" href="./buzz?b=1508&amp;c=10">青春校园</a> </li>
+					<li> <a class=" " title="穿越架空" href="./buzz?b=1509&amp;c=10">穿越架空</a> </li>
+					<li> <a class="odd " title="惊悚悬疑" href="./buzz?b=356&amp;c=10">惊悚悬疑</a> </li>
+					<li> <a class=" " title="历史军事" href="./buzz?b=459&amp;c=10">历史军事</a> </li>
+					<li> <a class="odd " title="游戏竞技" href="./buzz?b=1512&amp;c=10">游戏竞技</a> </li>
+					<li> <a class=" " title="耽美同人" href="./buzz?b=1510&amp;c=10">耽美同人</a> </li>
+					<li> <a class="odd " title="文学经典" href="./buzz?b=1513&amp;c=10">文学经典</a> </li>
+				</ul>
+			</div>
+		</div>
+		<div class="mainBody">
+			<div class="grayborder">
+				<div class="top-title">
+					<h2>今日小说排行榜</h2>
+					<a target="_blank" href="http://top.baidu.com/add"><img title="将此榜单添加到我的网站" src="http://top.bdimg.com/frontend/static/buzz/images/add-list.gif" alt="" /></a>
+				</div>
+				<table class="list-table">
+					<tbody>
+					<tr>
+						<th width="50" class="first">排名</th>
+						<th>关键词</th>
+						<th width="30%" class="tc">相关链接</th>
+						<th width="20%" class="last">搜索指数</th>
+					</tr>
+					<tr class="hideline">
+						<td class="first"> <span class="num-top">1</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C8%FD%C9%FA%C8%FD%CA%C0%CA%AE%C0%EF%CC%D2%BB%A8" href_top="./detail?b=7&amp;c=10&amp;w=%C8%FD%C9%FA%C8%FD%CA%C0%CA%AE%C0%EF%CC%D2%BB%A8">三生三世十里桃花</a> <a href="./detail?b=7&amp;c=10&amp;w=%C8%FD%C9%FA%C8%FD%CA%C0%CA%AE%C0%EF%CC%D2%BB%A8" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/subview/2101817/5395273.htm">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C8%FD%C9%FA%C8%FD%CA%C0%CA%AE%C0%EF%CC%D2%BB%A8&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C8%FD%C9%FA%C8%FD%CA%C0%CA%AE%C0%EF%CC%D2%BB%A8">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">249879</span> </td>
+					</tr>
+					<tr class="item-tr">
+						<td colspan="4">
+							<div class="item-info clearfix">
+								<a href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C8%FD%C9%FA%C8%FD%CA%C0%CA%AE%C0%EF%CC%D2%BB%A8" href_top="./detail?b=7&amp;c=10&amp;w=%C8%FD%C9%FA%C8%FD%CA%C0%CA%AE%C0%EF%CC%D2%BB%A8" class="item-img" target="_blank"> <img onload="this.style.width = (this.width &gt; 80 &amp;&amp; this.width/this.height &gt;= 80/87) ? &quot;80px&quot; : &quot;auto&quot;;this.style.height = (this.height &gt; 87 &amp;&amp; this.width/this.height &lt; 80/87) ? &quot;87px&quot; : &quot;auto&quot;;" src="http://imgsrc.baidu.com/baike/abpic/item/1ad5ad6eddc451da72e1e6b3b0fd5266d0163257.jpg" /> </a>
+								<p class="item-text"> <a href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C8%FD%C9%FA%C8%FD%CA%C0%CA%AE%C0%EF%CC%D2%BB%A8" target="_blank">唐七公子所著古风小说《三生三世十里桃花》，作者唐七（原笔名：唐七公子）创作的首部长篇小说，“三生三世”系列第一部。主要讲述了上古神话里的前世今生，青丘帝姬白浅和九重天太子夜华的三生爱恨、三世纠葛的故事。2016年11月，《三生三世十里桃花》荣登2016中国泛娱乐指数盛典“中国IP价值榜-网络文学榜top10”。</a> </p>
+							</div> </td>
+					</tr>
+					<tr class="hideline">
+						<td class="first"> <span class="num-top">2</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C0%CA%B6%C1%D5%DF" href_top="./detail?b=7&amp;c=10&amp;w=%C0%CA%B6%C1%D5%DF">朗读者</a> <a href="./detail?b=7&amp;c=10&amp;w=%C0%CA%B6%C1%D5%DF" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%C0%CA%B6%C1%D5%DF">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C0%CA%B6%C1%D5%DF&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C0%CA%B6%C1%D5%DF">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">221624</span> </td>
+					</tr>
+					<tr class="item-tr">
+						<td colspan="4">
+							<div class="item-info clearfix">
+								<a href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C0%CA%B6%C1%D5%DF" href_top="./detail?b=7&amp;c=10&amp;w=%C0%CA%B6%C1%D5%DF" class="item-img" target="_blank"> <img onload="this.style.width = (this.width &gt; 80 &amp;&amp; this.width/this.height &gt;= 80/87) ? &quot;80px&quot; : &quot;auto&quot;;this.style.height = (this.height &gt; 87 &amp;&amp; this.width/this.height &lt; 80/87) ? &quot;87px&quot; : &quot;auto&quot;;" src="http://imgsrc.baidu.com/baike/abpic/item/3c6d55fbb2fb4316794b54c028a4462309f7d337.jpg" /> </a>
+								<p class="item-text"> <a href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C0%CA%B6%C1%D5%DF" target="_blank">《朗读者》（德语：Der Vorleser）是德国法律教授和法官本哈德&middot;施林克于1995年撰写的长篇小说。该书是第一本登上《纽约时报》冠军的德语书籍。作品1995年在德国出版，1997年由卡露&middot;布朗&middot;珍妮维（Carol Brown Janeway）翻译的英语版本于美国发行。《朗读者》讲述男孩米夏和女人汉娜之间充满激情的忘年恋，而故事的深层含义则是近代德国人对于历史、暴行与原罪的自我鞭笞式的反思。..</a> </p>
+							</div> </td>
+					</tr>
+					<tr class="hideline">
+						<td class="first"> <span class="num-top">3</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B4%F3%D6%F7%D4%D7" href_top="./detail?b=7&amp;c=10&amp;w=%B4%F3%D6%F7%D4%D7">大主宰</a> <a href="./detail?b=7&amp;c=10&amp;w=%B4%F3%D6%F7%D4%D7" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%B4%F3%D6%F7%D4%D7">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B4%F3%D6%F7%D4%D7&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B4%F3%D6%F7%D4%D7">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">127997</span> </td>
+					</tr>
+					<tr class="item-tr">
+						<td colspan="4">
+							<div class="item-info clearfix">
+								<a href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B4%F3%D6%F7%D4%D7" href_top="./detail?b=7&amp;c=10&amp;w=%B4%F3%D6%F7%D4%D7" class="item-img" target="_blank"> <img onload="this.style.width = (this.width &gt; 80 &amp;&amp; this.width/this.height &gt;= 80/87) ? &quot;80px&quot; : &quot;auto&quot;;this.style.height = (this.height &gt; 87 &amp;&amp; this.width/this.height &lt; 80/87) ? &quot;87px&quot; : &quot;auto&quot;;" src="http://imgsrc.baidu.com/baike/abpic/item/dbb44aed2e738bd401c0de76a78b87d6267ff990.jpg" /> </a>
+								<p class="item-text"> <a href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B4%F3%D6%F7%D4%D7" target="_blank">13年7月1日天蚕土豆第四本小说《大主宰》首发起点，与斗破苍穹和武动乾坤有联系，讲述牧尘的故事16年11月大主宰荣登2016中国泛娱乐指数盛典中国IP价值榜-网络文学榜top10</a> </p>
+							</div> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">4</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D0%FE%BD%E7%D6%AE%C3%C5" href_top="./detail?b=7&amp;c=10&amp;w=%D0%FE%BD%E7%D6%AE%C3%C5">玄界之门</a> <a href="./detail?b=7&amp;c=10&amp;w=%D0%FE%BD%E7%D6%AE%C3%C5" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D0%FE%BD%E7%D6%AE%C3%C5">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D0%FE%BD%E7%D6%AE%C3%C5&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D0%FE%BD%E7%D6%AE%C3%C5">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">127509</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">5</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C1%FA%B7%FB" href_top="./detail?b=7&amp;c=10&amp;w=%C1%FA%B7%FB">龙符</a> <a href="./detail?b=7&amp;c=10&amp;w=%C1%FA%B7%FB" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%C1%FA%B7%FB">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C1%FA%B7%FB&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C1%FA%B7%FB">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">57469</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">6</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B6%B7%C6%C6%B2%D4%F1%B7" href_top="./detail?b=7&amp;c=10&amp;w=%B6%B7%C6%C6%B2%D4%F1%B7">斗破苍穹</a> <a href="./detail?b=7&amp;c=10&amp;w=%B6%B7%C6%C6%B2%D4%F1%B7" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/subview/2408973/9193615.htm">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B6%B7%C6%C6%B2%D4%F1%B7&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B6%B7%C6%C6%B2%D4%F1%B7">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">55249</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">7</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B6%B7%D5%BD%BF%F1%B3%B1" href_top="./detail?b=7&amp;c=10&amp;w=%B6%B7%D5%BD%BF%F1%B3%B1">斗战狂潮</a> <a href="./detail?b=7&amp;c=10&amp;w=%B6%B7%D5%BD%BF%F1%B3%B1" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%B6%B7%D5%BD%BF%F1%B3%B1">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B6%B7%D5%BD%BF%F1%B3%B1&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B6%B7%D5%BD%BF%F1%B3%B1">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">50113</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">8</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D1%A9%D3%A5%C1%EC%D6%F7" href_top="./detail?b=7&amp;c=10&amp;w=%D1%A9%D3%A5%C1%EC%D6%F7">雪鹰领主</a> <a href="./detail?b=7&amp;c=10&amp;w=%D1%A9%D3%A5%C1%EC%D6%F7" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D1%A9%D3%A5%C1%EC%D6%F7">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D1%A9%D3%A5%C1%EC%D6%F7&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D1%A9%D3%A5%C1%EC%D6%F7">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">42987</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">9</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C4%E6%C1%DB" href_top="./detail?b=7&amp;c=10&amp;w=%C4%E6%C1%DB">逆鳞</a> <a href="./detail?b=7&amp;c=10&amp;w=%C4%E6%C1%DB" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/subview/1664/19153800.htm">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C4%E6%C1%DB&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C4%E6%C1%DB">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">39871</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">10</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%CA%A5%D0%E6" href_top="./detail?b=7&amp;c=10&amp;w=%CA%A5%D0%E6">圣墟</a> <a href="./detail?b=7&amp;c=10&amp;w=%CA%A5%D0%E6" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%CA%A5%D0%E6">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%CA%A5%D0%E6&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%CA%A5%D0%E6">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">35229</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">11</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C1%E9%D3%F2" href_top="./detail?b=7&amp;c=10&amp;w=%C1%E9%D3%F2">灵域</a> <a href="./detail?b=7&amp;c=10&amp;w=%C1%E9%D3%F2" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%C1%E9%D3%F2">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C1%E9%D3%F2&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C1%E9%D3%F2">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">32434</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">12</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C1%E8%CC%EC%D5%BD%D7%F0" href_top="./detail?b=7&amp;c=10&amp;w=%C1%E8%CC%EC%D5%BD%D7%F0">凌天战尊</a> <a href="./detail?b=7&amp;c=10&amp;w=%C1%E8%CC%EC%D5%BD%D7%F0" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%C1%E8%CC%EC%D5%BD%D7%F0">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C1%E8%CC%EC%D5%BD%D7%F0&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C1%E8%CC%EC%D5%BD%D7%F0">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">29250</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">13</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C1%FA%CD%F5%B4%AB%CB%B5" href_top="./detail?b=7&amp;c=10&amp;w=%C1%FA%CD%F5%B4%AB%CB%B5">龙王传说</a> <a href="./detail?b=7&amp;c=10&amp;w=%C1%FA%CD%F5%B4%AB%CB%B5" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%C1%FA%CD%F5%B4%AB%CB%B5">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C1%FA%CD%F5%B4%AB%CB%B5&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C1%FA%CD%F5%B4%AB%CB%B5">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">27391</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">14</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D2%BB%C4%EE%D3%C0%BA%E3" href_top="./detail?b=7&amp;c=10&amp;w=%D2%BB%C4%EE%D3%C0%BA%E3">一念永恒</a> <a href="./detail?b=7&amp;c=10&amp;w=%D2%BB%C4%EE%D3%C0%BA%E3" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D2%BB%C4%EE%D3%C0%BA%E3">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D2%BB%C4%EE%D3%C0%BA%E3&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D2%BB%C4%EE%D3%C0%BA%E3">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">25674</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">15</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D4%F1%CC%EC%BC%C7" href_top="./detail?b=7&amp;c=10&amp;w=%D4%F1%CC%EC%BC%C7">择天记</a> <a href="./detail?b=7&amp;c=10&amp;w=%D4%F1%CC%EC%BC%C7" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D4%F1%CC%EC%BC%C7">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D4%F1%CC%EC%BC%C7&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D4%F1%CC%EC%BC%C7">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">24581</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">16</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C1%E9%CE%E4%B5%DB%D7%F0" href_top="./detail?b=7&amp;c=10&amp;w=%C1%E9%CE%E4%B5%DB%D7%F0">灵武帝尊</a> <a href="./detail?b=7&amp;c=10&amp;w=%C1%E9%CE%E4%B5%DB%D7%F0" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%C1%E9%CE%E4%B5%DB%D7%F0">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C1%E9%CE%E4%B5%DB%D7%F0&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C1%E9%CE%E4%B5%DB%D7%F0">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">24187</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">17</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D6%C1%D7%F0%C9%F1%C4%A7" href_top="./detail?b=7&amp;c=10&amp;w=%D6%C1%D7%F0%C9%F1%C4%A7">至尊神魔</a> <a href="./detail?b=7&amp;c=10&amp;w=%D6%C1%D7%F0%C9%F1%C4%A7" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D6%C1%D7%F0%C9%F1%C4%A7">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D6%C1%D7%F0%C9%F1%C4%A7&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D6%C1%D7%F0%C9%F1%C4%A7">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">23306</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">18</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C1%F0%C1%A7%C3%C0%C8%CB%C3%FC" href_top="./detail?b=7&amp;c=10&amp;w=%C1%F0%C1%A7%C3%C0%C8%CB%C3%FC">琉璃美人命</a> <a href="./detail?b=7&amp;c=10&amp;w=%C1%F0%C1%A7%C3%C0%C8%CB%C3%FC" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%C1%F0%C1%A7%C3%C0%C8%CB%C3%FC">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C1%F0%C1%A7%C3%C0%C8%CB%C3%FC&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C1%F0%C1%A7%C3%C0%C8%CB%C3%FC">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">22900</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">19</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B8%DF%CA%F5%CD%A8%C9%F1" href_top="./detail?b=7&amp;c=10&amp;w=%B8%DF%CA%F5%CD%A8%C9%F1">高术通神</a> <a href="./detail?b=7&amp;c=10&amp;w=%B8%DF%CA%F5%CD%A8%C9%F1" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%B8%DF%CA%F5%CD%A8%C9%F1">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B8%DF%CA%F5%CD%A8%C9%F1&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B8%DF%CA%F5%CD%A8%C9%F1">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">22321</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">20</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D7%BD%B9%C6%BC%C7" href_top="./detail?b=7&amp;c=10&amp;w=%D7%BD%B9%C6%BC%C7">捉蛊记</a> <a href="./detail?b=7&amp;c=10&amp;w=%D7%BD%B9%C6%BC%C7" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D7%BD%B9%C6%BC%C7">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D7%BD%B9%C6%BC%C7&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D7%BD%B9%C6%BC%C7">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">21699</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">21</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B4%F3%BD%A3%C9%F1" href_top="./detail?b=7&amp;c=10&amp;w=%B4%F3%BD%A3%C9%F1">大剑神</a> <a href="./detail?b=7&amp;c=10&amp;w=%B4%F3%BD%A3%C9%F1" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%B4%F3%BD%A3%C9%F1">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B4%F3%BD%A3%C9%F1&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B4%F3%BD%A3%C9%F1">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">21634</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">22</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D2%F5%D1%F4%B4%FA%C0%ED%C8%CB%D6%AE%B8%C4%C3%FC%CA%A6" href_top="./detail?b=7&amp;c=10&amp;w=%D2%F5%D1%F4%B4%FA%C0%ED%C8%CB%D6%AE%B8%C4%C3%FC%CA%A6">阴阳代理人之改命师</a> <a href="./detail?b=7&amp;c=10&amp;w=%D2%F5%D1%F4%B4%FA%C0%ED%C8%CB%D6%AE%B8%C4%C3%FC%CA%A6" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D2%F5%D1%F4%B4%FA%C0%ED%C8%CB%D6%AE%B8%C4%C3%FC%CA%A6">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D2%F5%D1%F4%B4%FA%C0%ED%C8%CB%D6%AE%B8%C4%C3%FC%CA%A6&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D2%F5%D1%F4%B4%FA%C0%ED%C8%CB%D6%AE%B8%C4%C3%FC%CA%A6">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">21261</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">23</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%CC%AB%B9%C5%C9%F1%CD%F5" href_top="./detail?b=7&amp;c=10&amp;w=%CC%AB%B9%C5%C9%F1%CD%F5">太古神王</a> <a href="./detail?b=7&amp;c=10&amp;w=%CC%AB%B9%C5%C9%F1%CD%F5" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%CC%AB%B9%C5%C9%F1%CD%F5">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%CC%AB%B9%C5%C9%F1%CD%F5&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%CC%AB%B9%C5%C9%F1%CD%F5">贴吧</a> </td>
+						<td class="last"> <span class="icon-fair">20700</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">24</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D3%C0%D2%B9%BE%FD%CD%F5" href_top="./detail?b=7&amp;c=10&amp;w=%D3%C0%D2%B9%BE%FD%CD%F5">永夜君王</a> <a href="./detail?b=7&amp;c=10&amp;w=%D3%C0%D2%B9%BE%FD%CD%F5" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D3%C0%D2%B9%BE%FD%CD%F5">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D3%C0%D2%B9%BE%FD%CD%F5&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D3%C0%D2%B9%BE%FD%CD%F5">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">20163</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">25</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D4%EC%BB%AF%D6%AE%C3%C5" href_top="./detail?b=7&amp;c=10&amp;w=%D4%EC%BB%AF%D6%AE%C3%C5">造化之门</a> <a href="./detail?b=7&amp;c=10&amp;w=%D4%EC%BB%AF%D6%AE%C3%C5" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D4%EC%BB%AF%D6%AE%C3%C5">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D4%EC%BB%AF%D6%AE%C3%C5&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D4%EC%BB%AF%D6%AE%C3%C5">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">19927</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">26</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%BD%D9%CC%EC%D4%CB" href_top="./detail?b=7&amp;c=10&amp;w=%BD%D9%CC%EC%D4%CB">劫天运</a> <a href="./detail?b=7&amp;c=10&amp;w=%BD%D9%CC%EC%D4%CB" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%BD%D9%CC%EC%D4%CB">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%BD%D9%CC%EC%D4%CB&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%BD%D9%CC%EC%D4%CB">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">18842</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">27</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%CE%E4%C1%B6%E1%DB%B7%E5" href_top="./detail?b=7&amp;c=10&amp;w=%CE%E4%C1%B6%E1%DB%B7%E5">武炼巅峰</a> <a href="./detail?b=7&amp;c=10&amp;w=%CE%E4%C1%B6%E1%DB%B7%E5" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%CE%E4%C1%B6%E1%DB%B7%E5">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%CE%E4%C1%B6%E1%DB%B7%E5&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%CE%E4%C1%B6%E1%DB%B7%E5">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">18677</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">28</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B4%F3%CA%A5%B4%AB" href_top="./detail?b=7&amp;c=10&amp;w=%B4%F3%CA%A5%B4%AB">大圣传</a> <a href="./detail?b=7&amp;c=10&amp;w=%B4%F3%CA%A5%B4%AB" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%B4%F3%CA%A5%B4%AB">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B4%F3%CA%A5%B4%AB&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B4%F3%CA%A5%B4%AB">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">17961</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">29</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%BE%F8%CA%C0%D5%BD%BB%EA" href_top="./detail?b=7&amp;c=10&amp;w=%BE%F8%CA%C0%D5%BD%BB%EA">绝世战魂</a> <a href="./detail?b=7&amp;c=10&amp;w=%BE%F8%CA%C0%D5%BD%BB%EA" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%BE%F8%CA%C0%D5%BD%BB%EA">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%BE%F8%CA%C0%D5%BD%BB%EA&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%BE%F8%CA%C0%D5%BD%BB%EA">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">14124</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">30</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B0%D7%C9%DF%BC%B2%CE%C5%C2%BC" href_top="./detail?b=7&amp;c=10&amp;w=%B0%D7%C9%DF%BC%B2%CE%C5%C2%BC">白蛇疾闻录</a> <a href="./detail?b=7&amp;c=10&amp;w=%B0%D7%C9%DF%BC%B2%CE%C5%C2%BC" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%B0%D7%C9%DF%BC%B2%CE%C5%C2%BC">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B0%D7%C9%DF%BC%B2%CE%C5%C2%BC&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B0%D7%C9%DF%BC%B2%CE%C5%C2%BC">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">14063</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">31</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D2%BB%BD%A3%B7%C9%CF%C9" href_top="./detail?b=7&amp;c=10&amp;w=%D2%BB%BD%A3%B7%C9%CF%C9">一剑飞仙</a> <a href="./detail?b=7&amp;c=10&amp;w=%D2%BB%BD%A3%B7%C9%CF%C9" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D2%BB%BD%A3%B7%C9%CF%C9">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D2%BB%BD%A3%B7%C9%CF%C9&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D2%BB%BD%A3%B7%C9%CF%C9">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">13856</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">32</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D0%A3%BB%A8%B5%C4%CC%F9%C9%ED%B8%DF%CA%D6" href_top="./detail?b=7&amp;c=10&amp;w=%D0%A3%BB%A8%B5%C4%CC%F9%C9%ED%B8%DF%CA%D6">校花的贴身高手</a> <a href="./detail?b=7&amp;c=10&amp;w=%D0%A3%BB%A8%B5%C4%CC%F9%C9%ED%B8%DF%CA%D6" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D0%A3%BB%A8%B5%C4%CC%F9%C9%ED%B8%DF%CA%D6">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D0%A3%BB%A8%B5%C4%CC%F9%C9%ED%B8%DF%CA%D6&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D0%A3%BB%A8%B5%C4%CC%F9%C9%ED%B8%DF%CA%D6">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">13369</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">33</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D1%B0%D5%D2%C7%B0%CA%C0%D6%AE%C2%C3" href_top="./detail?b=7&amp;c=10&amp;w=%D1%B0%D5%D2%C7%B0%CA%C0%D6%AE%C2%C3">寻找前世之旅</a> <a href="./detail?b=7&amp;c=10&amp;w=%D1%B0%D5%D2%C7%B0%CA%C0%D6%AE%C2%C3" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%D1%B0%D5%D2%C7%B0%CA%C0%D6%AE%C2%C3">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D1%B0%D5%D2%C7%B0%CA%C0%D6%AE%C2%C3&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D1%B0%D5%D2%C7%B0%CA%C0%D6%AE%C2%C3">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">13270</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">34</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C9%C1%BB%E9%D7%DC%B2%C3%C6%F5%D4%BC%C6%DE" href_top="./detail?b=7&amp;c=10&amp;w=%C9%C1%BB%E9%D7%DC%B2%C3%C6%F5%D4%BC%C6%DE">闪婚总裁契约妻</a> <a href="./detail?b=7&amp;c=10&amp;w=%C9%C1%BB%E9%D7%DC%B2%C3%C6%F5%D4%BC%C6%DE" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%C9%C1%BB%E9%D7%DC%B2%C3%C6%F5%D4%BC%C6%DE">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C9%C1%BB%E9%D7%DC%B2%C3%C6%F5%D4%BC%C6%DE&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C9%C1%BB%E9%D7%DC%B2%C3%C6%F5%D4%BC%C6%DE">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">11960</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">35</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D4%AA%C6%F8%C9%D9%C4%EA" href_top="./detail?b=7&amp;c=10&amp;w=%D4%AA%C6%F8%C9%D9%C4%EA">元气少年</a> <a href="./detail?b=7&amp;c=10&amp;w=%D4%AA%C6%F8%C9%D9%C4%EA" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/subview/1493113/20599627.htm">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D4%AA%C6%F8%C9%D9%C4%EA&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D4%AA%C6%F8%C9%D9%C4%EA">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">11892</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">36</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%CE%A2%CE%A2%D2%BB%D0%A6%BA%DC%C7%E3%B3%C7" href_top="./detail?b=7&amp;c=10&amp;w=%CE%A2%CE%A2%D2%BB%D0%A6%BA%DC%C7%E3%B3%C7">微微一笑很倾城</a> <a href="./detail?b=7&amp;c=10&amp;w=%CE%A2%CE%A2%D2%BB%D0%A6%BA%DC%C7%E3%B3%C7" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%CE%A2%CE%A2%D2%BB%D0%A6%BA%DC%C7%E3%B3%C7">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%CE%A2%CE%A2%D2%BB%D0%A6%BA%DC%C7%E3%B3%C7&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%CE%A2%CE%A2%D2%BB%D0%A6%BA%DC%C7%E3%B3%C7">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">11885</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">37</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C0%C5%E7%F0%B0%F1" href_top="./detail?b=7&amp;c=10&amp;w=%C0%C5%E7%F0%B0%F1">琅琊榜</a> <a href="./detail?b=7&amp;c=10&amp;w=%C0%C5%E7%F0%B0%F1" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/subview/1562685/12093739.htm">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C0%C5%E7%F0%B0%F1&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C0%C5%E7%F0%B0%F1">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">11377</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">38</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%CA%A2%CC%C6%E1%C8%C6%F0" href_top="./detail?b=7&amp;c=10&amp;w=%CA%A2%CC%C6%E1%C8%C6%F0">盛唐崛起</a> <a href="./detail?b=7&amp;c=10&amp;w=%CA%A2%CC%C6%E1%C8%C6%F0" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%CA%A2%CC%C6%E1%C8%C6%F0">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%CA%A2%CC%C6%E1%C8%C6%F0&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%CA%A2%CC%C6%E1%C8%C6%F0">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">11312</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">39</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B6%BE%B3%E8%D3%B6%B1%F8%CD%F5%E5%FA" href_top="./detail?b=7&amp;c=10&amp;w=%B6%BE%B3%E8%D3%B6%B1%F8%CD%F5%E5%FA">毒宠佣兵王妃</a> <a href="./detail?b=7&amp;c=10&amp;w=%B6%BE%B3%E8%D3%B6%B1%F8%CD%F5%E5%FA" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%B6%BE%B3%E8%D3%B6%B1%F8%CD%F5%E5%FA">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B6%BE%B3%E8%D3%B6%B1%F8%CD%F5%E5%FA&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B6%BE%B3%E8%D3%B6%B1%F8%CD%F5%E5%FA">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">11065</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">40</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B6%B7%C2%DE%B4%F3%C2%BD" href_top="./detail?b=7&amp;c=10&amp;w=%B6%B7%C2%DE%B4%F3%C2%BD">斗罗大陆</a> <a href="./detail?b=7&amp;c=10&amp;w=%B6%B7%C2%DE%B4%F3%C2%BD" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/subview/2064911/5173757.htm">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B6%B7%C2%DE%B4%F3%C2%BD&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B6%B7%C2%DE%B4%F3%C2%BD">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">10209</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">41</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%D1%FD%C9%F1%BC%C7" href_top="./detail?b=7&amp;c=10&amp;w=%D1%FD%C9%F1%BC%C7">妖神记</a> <a href="./detail?b=7&amp;c=10&amp;w=%D1%FD%C9%F1%BC%C7" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/subview/13628948/17870817.htm">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%D1%FD%C9%F1%BC%C7&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%D1%FD%C9%F1%BC%C7">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">10084</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">42</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%CE%D2%D5%E6%CA%C7%B4%F3%C3%F7%D0%C7" href_top="./detail?b=7&amp;c=10&amp;w=%CE%D2%D5%E6%CA%C7%B4%F3%C3%F7%D0%C7">我真是大明星</a> <a href="./detail?b=7&amp;c=10&amp;w=%CE%D2%D5%E6%CA%C7%B4%F3%C3%F7%D0%C7" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%CE%D2%D5%E6%CA%C7%B4%F3%C3%F7%D0%C7">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%CE%D2%D5%E6%CA%C7%B4%F3%C3%F7%D0%C7&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%CE%D2%D5%E6%CA%C7%B4%F3%C3%F7%D0%C7">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">9858</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">43</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C8%AB%D6%B0%B7%A8%CA%A6" href_top="./detail?b=7&amp;c=10&amp;w=%C8%AB%D6%B0%B7%A8%CA%A6">全职法师</a> <a href="./detail?b=7&amp;c=10&amp;w=%C8%AB%D6%B0%B7%A8%CA%A6" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%C8%AB%D6%B0%B7%A8%CA%A6">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C8%AB%D6%B0%B7%A8%CA%A6&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C8%AB%D6%B0%B7%A8%CA%A6">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">9841</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">44</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%CC%EC%D3%F2%B2%D4%F1%B7" href_top="./detail?b=7&amp;c=10&amp;w=%CC%EC%D3%F2%B2%D4%F1%B7">天域苍穹</a> <a href="./detail?b=7&amp;c=10&amp;w=%CC%EC%D3%F2%B2%D4%F1%B7" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%CC%EC%D3%F2%B2%D4%F1%B7">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%CC%EC%D3%F2%B2%D4%F1%B7&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%CC%EC%D3%F2%B2%D4%F1%B7">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">9631</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">45</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B9%C2%B7%BC%B2%BB%D7%D4%C9%CD" href_top="./detail?b=7&amp;c=10&amp;w=%B9%C2%B7%BC%B2%BB%D7%D4%C9%CD">孤芳不自赏</a> <a href="./detail?b=7&amp;c=10&amp;w=%B9%C2%B7%BC%B2%BB%D7%D4%C9%CD" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/subview/1012331/18000613.htm">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B9%C2%B7%BC%B2%BB%D7%D4%C9%CD&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B9%C2%B7%BC%B2%BB%D7%D4%C9%CD">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">9366</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">46</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%CC%EC%D3%F2%C9%F1%D7%F9" href_top="./detail?b=7&amp;c=10&amp;w=%CC%EC%D3%F2%C9%F1%D7%F9">天域神座</a> <a href="./detail?b=7&amp;c=10&amp;w=%CC%EC%D3%F2%C9%F1%D7%F9" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%CC%EC%D3%F2%C9%F1%D7%F9">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%CC%EC%D3%F2%C9%F1%D7%F9&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%CC%EC%D3%F2%C9%F1%D7%F9">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">9200</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">47</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%CC%EC%B2%C5%D0%A1%B6%BE%E5%FA" href_top="./detail?b=7&amp;c=10&amp;w=%CC%EC%B2%C5%D0%A1%B6%BE%E5%FA">天才小毒妃</a> <a href="./detail?b=7&amp;c=10&amp;w=%CC%EC%B2%C5%D0%A1%B6%BE%E5%FA" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%CC%EC%B2%C5%D0%A1%B6%BE%E5%FA">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%CC%EC%B2%C5%D0%A1%B6%BE%E5%FA&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%CC%EC%B2%C5%D0%A1%B6%BE%E5%FA">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">9144</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">48</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B6%F1%C4%A7%CD%F5%D7%D3%CB%C7%D1%F8%B7%A8%D4%F2" href_top="./detail?b=7&amp;c=10&amp;w=%B6%F1%C4%A7%CD%F5%D7%D3%CB%C7%D1%F8%B7%A8%D4%F2">恶魔王子饲养法则</a> <a href="./detail?b=7&amp;c=10&amp;w=%B6%F1%C4%A7%CD%F5%D7%D3%CB%C7%D1%F8%B7%A8%D4%F2" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%B6%F1%C4%A7%CD%F5%D7%D3%CB%C7%D1%F8%B7%A8%D4%F2">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B6%F1%C4%A7%CD%F5%D7%D3%CB%C7%D1%F8%B7%A8%D4%F2&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B6%F1%C4%A7%CD%F5%D7%D3%CB%C7%D1%F8%B7%A8%D4%F2">贴吧</a> </td>
+						<td class="last"> <span class="icon-fall">8726</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">49</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%C4%A7%CA%DE%D5%BD%C9%F1" href_top="./detail?b=7&amp;c=10&amp;w=%C4%A7%CA%DE%D5%BD%C9%F1">魔兽战神</a> <a href="./detail?b=7&amp;c=10&amp;w=%C4%A7%CA%DE%D5%BD%C9%F1" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/search/word?word=%C4%A7%CA%DE%D5%BD%C9%F1">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%C4%A7%CA%DE%D5%BD%C9%F1&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%C4%A7%CA%DE%D5%BD%C9%F1">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">8694</span> </td>
+					</tr>
+					<tr>
+						<td class="first"> <span class="num-normal">50</span> </td>
+						<td class="keyword"> <a class="list-title" target="_blank" href="http://www.baidu.com/baidu?cl=3&amp;tn=SE_baiduhomet8_jmjb7mjw&amp;fr=top1000&amp;wd=%B5%C1%C4%B9%B1%CA%BC%C7" href_top="./detail?b=7&amp;c=10&amp;w=%B5%C1%C4%B9%B1%CA%BC%C7">盗墓笔记</a> <a href="./detail?b=7&amp;c=10&amp;w=%B5%C1%C4%B9%B1%CA%BC%C7" class="icon-search icon-xiang-imp" target="_blank">search</a> </td>
+						<td class="tc"> <a target="_blank" href="http://baike.baidu.com/subview/582208/6687576.htm">简介</a> <a target="_blank" href="http://image.baidu.com/i?tn=baiduimage&amp;lm=-1&amp;ct=201326592&amp;cl=2&amp;word=%B5%C1%C4%B9%B1%CA%BC%C7&amp;ie=gbk">图片</a> <a target="_blank" href="http://tieba.baidu.com/f?kw=%B5%C1%C4%B9%B1%CA%BC%C7">贴吧</a> </td>
+						<td class="last"> <span class="icon-rise">8273</span> </td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<span style="font-family:arial;">&copy;</span>2017 Baidu
+		<a target="_blank" href="http://www.baidu.com/duty/index.html">使用百度前必读</a>
+		<a href="./help">关于百度风云榜</a>
+		<span class="follow">关注我们：</span>
+		<a target="_blank" class="weibo" href="http://e.weibo.com/baidutop">&nbsp;</a>
+	</div>
+</div>
+<div class="fixed_rbox">
+	<a class="fixed_rbox_inner" href="javascript:;">风云榜轻应用<img style="display:block;margin-left:5px;" width="90" height="90" src="http://top.bdimg.com/frontend/static/common/qyy.png" />扫描打开</a>
+</div>
+<script>var toptrackserver="http://top.bdimg.com/frontend/static";var href = location.href, domains = ["top.baidu.com.cn","top.baidu.com"];for(var i = 0, len = domains.length; i < len; i++){if(href.indexOf(domains[i])!==-1){BASE_URL = "http://"+domains[i]+"/";BASEURL = BASE_URL+"frontend";break;}}var BASE_DATE = "2017年03月05日", online = true, curpage = "buzz";</script>
+<style>#bdshare{z-index:1;} .bdshareBox_r{width:25px;padding:2px 0 4px;border:1px solid #d9d9de;border-left:0;}</style>
+<script type="text/javascript">var bds_config = {};</script>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=655757"></script>
+<div id="bdshare" data="" style="display:none;position:absolute;top:0;left:0;" class="bdshareBox bdshareBox_r bdshare_t bds_tools get-codes-bdshare">
+	<a class="bds_qzone"></a>
+	<a class="bds_tsina"></a>
+	<a class="bds_tqq"></a>
+	<a class="bds_renren"></a>
+	<a class="bds_baidu"></a>
+	<a class="bds_tieba"></a>
+</div>
+<script>
+	$(function(){
+		var shareobj = $("#main").offset(), shareleft = shareobj.left + 959, sharetop = shareobj.top;
+		//showbdshare(shareleft, sharetop, "{'text':'#2017年03月05日今日小说排行榜#【1】三生三世十里桃花【2】朗读者【3】大主宰【4】玄界之门【5】龙符【6】斗破苍穹【7】斗战狂潮【8】雪鹰领主【9】逆鳞【10】圣墟【11】灵域 分享自@百度搜索风云榜','title':'#2017年03月05日今日小说排行榜#【1】三生三世十里桃花【2】朗读者【3】大主宰【4】玄界之门【5】龙符【6】斗破苍穹【7】斗战狂潮【8】雪鹰领主【9】逆鳞【10】圣墟【11】灵域 分享自@百度搜索风云榜','pic':'http://top.baidu.com/buzz/shot/7.png'}");
+	})
+</script>
+<div id="bdshare" data="" style="display:none;position:absolute;top:0;left:0;" class="bdshareBox bdshare_t bds_tools get-codes-bdshare">
+	<a class="bds_qzone"></a>
+	<a class="bds_tsina"></a>
+	<a class="bds_tqq"></a>
+	<a class="bds_renren"></a>
+	<a class="bds_baidu"></a>
+	<a class="bds_tieba"></a>
+</div>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript" src="http://top.bdimg.com/frontend/build/common/common.min.js?v=150709"></script>
+<script type="text/javascript" src="http://top.bdimg.com/frontend/build/buzz/buzz.js?v=150709"></script>
+<script src="http://top.bdimg.com/frontend/static/embed/nsclick.js?v=150709" type="text/javascript"></script>
+<!--
+<div style="display:none">-->
+<script type="text/javascript">var clickmonkey ={log: function(){}};if(typeof ClickMonkey != "undefined"){clickmonkey = ClickMonkey(false);}var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F79a0e9c520104773e13ccd072bc956aa' type='text/javascript'%3E%3C/script%3E"));</script>
+<!--</div>-->
+</body>
+</html>
